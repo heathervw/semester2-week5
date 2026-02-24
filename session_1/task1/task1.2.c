@@ -29,7 +29,33 @@ int main(void) {
     scanf("%d", &year);
 	
 	// Complete your code here
-	if (){  // todo
+	if ((year%4 == 0 && year%100!=0)|| year%400==0){ 
+		printf("Leap Year\n");
+	} else{
+		printf("Not a Leap Year\n");
+	}
+	
+    return 0;
+	 
+}
+
+
+// Or you can do it like this for a more English approach
+
+#include <stdio.h>
+#include<stdiobool.h>
+int main(void) {
+	
+    int year;
+	
+    printf("Enter year: ");
+    scanf("%d", &year);
+	
+	bool divisible_by_4 = year%4 == 0;
+	bool not_divisible_by_100 = year%100!=0
+	bool divisible_by_400 = year%400==0
+	// Complete your code here
+	if ((divisible_by_4 && not_divisible_by_100)|| divisible_by_400){ 
 		printf("Leap Year\n");
 	} else{
 		printf("Not a Leap Year\n");
