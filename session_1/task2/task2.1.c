@@ -24,7 +24,7 @@
  */
 
 #include <stdio.h>
-#include <stdlib.h>  // Required for atof() function
+#include <stdlib.h>  // Required for atof() function - meaning argument to float 
 
 int main(int argc, char *argv[]) {
     float num1, num2;
@@ -47,10 +47,25 @@ int main(int argc, char *argv[]) {
     
     // Complete your code here
 	switch(operation){
-		case :
+		case '+':
+        result = num1+num2;
+            break;
+        case '-':
+            result = num1-num2;
+            break;
+        case 'x':
+            result = num1*num2;
+            break;
+        case '/':
+            if(num2 == 0){
+            printf("Number undefined do not enter 0 as a divisor");
+            } else {
+            result = num1/num2;
+            }
             break;
 		default:
 			printf("Operation not defined!\n");
+            return 2;
 	}
     
     printf("Result: %.2f\n", result);
